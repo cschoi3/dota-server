@@ -1,4 +1,5 @@
 const express = require('express');
+var bodyParser = require('body-parser')
 
 const app = express();
 
@@ -13,6 +14,12 @@ app.use((req, res, next) => {
   );
   next();
 });
+
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
+
 initializeDatabases()
   .then((dbs) => {
     // Initialize the application once database connections are ready.

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mongolab/express-mongodb-setup#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.15.2",
     "mongodb": "^3.0.4"
   }
