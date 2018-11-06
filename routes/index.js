@@ -56,7 +56,6 @@ module.exports = (app, dbs) => {
   });
 
   app.post('/user', (req, res) => {
-    console.log(req.body)
     dbs.dev.collection('users').insertOne(req.body)
   })
 
